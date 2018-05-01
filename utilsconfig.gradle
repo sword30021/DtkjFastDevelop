@@ -1,82 +1,26 @@
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-def siteUrl = 'https://github.com/codezhanghao/CustomProgressbar'
-def gitUrl = 'https://github.com/codezhanghao/CustomProgressbar.git'
+ext {
+    bintrayRepo = 'AndroidLibrary'
+    bintrayName = 'dtkj_library_utils'
 
-group = 'com.dtkj.utils'
-version = '0.0.1'
+    publishedGroupId = 'com.dtkj.utils'
+    libraryName = 'dtkj_library_utils'
+    artifact = 'dtkj_library_utils'
 
-install {
-    repositories.mavenInstaller {
-        pom {
-            project {
-                packaging 'aar'
-                name 'custom progressbar for android'
-                url siteUrl
+    libraryDescription = 'the library contain most commons utils for android develop'
 
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
+    siteUrl = 'https://github.com/sword30021/DtkjFastDevelop'
+    gitUrl = 'https://github.com/sword30021/DtkjFastDevelop.git'
 
-                developers {
-                    developer {
-                        id 'czh'
-                        name 'ZHANG.Hao'
-                        email '809026704@qq.com'
-                    }
-                }
+    libraryVersion = ver.dtkjUtilsVersion
 
-                scm {
-                    connection gitUrl
-                    developerConnection gitUrl
-                    url siteUrl
-                }
-            }
+    developerId = 'sword'
+    developerName = 'sword'
+    developerEmail = 'sword30021@gmail.com'
 
-        }
-    }
-}
-
-task androidJavadocs(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
-    classifier = 'javadoc'
-    from androidJavadocs.destinationDir
-}
-
-task androidSourcesJar(type: Jar) {
-    classifier = 'sources'
-    from android.sourceSets.main.java.srcDirs
-}
-
-artifacts {
-    archives androidSourcesJar
-    archives androidJavadocsJar
-}
-
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
-    configurations = ['archives']
-    pkg {
-        version {
-            name = '0.0.1'
-            desc = 'custom progress bar 0.0.1'
-        }
-        repo = 'maven'
-        name = 'custom-progressbar'
-        licenses = ['Apache-2.0']
-        vcsUrl = gitUrl
-        publish = true
-    }
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
 }

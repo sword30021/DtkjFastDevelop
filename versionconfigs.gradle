@@ -12,6 +12,8 @@ ext {
             junit            : '4.12',
             testRunner       : '1.0.1',
             espressoCore     : '3.0.1',
+
+            dtkjUtilsVersion : '0.0.1'
     ]
 
     dep = [

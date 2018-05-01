@@ -31,3 +31,7 @@ dependencies {
     androidTestImplementation dep.testRunner
     androidTestImplementation dep.espressoCore
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+apply from: 'utilsconfig.gradle'
