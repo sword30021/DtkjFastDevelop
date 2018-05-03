@@ -9,16 +9,16 @@ import android.view.View;
 import android.view.WindowManager;
 
 /**
- * Created by sword on 18/5/1
+ * Created by sword on 17/3/21
  * Email: 1619153872@qq.com
- * Description: the utils for system
+ * Description: the utils for screen
  */
-public class DTSystemUtils {
+public class DTScreenUtils {
     /**
-     * 获得屏幕宽度
+     * 获得屏幕高度
      *
      * @param context 上下文
-     * @return 获得屏幕宽度
+     * @return 获得屏幕高度
      */
     public static int getScreenWidth(Context context) {
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -28,10 +28,10 @@ public class DTSystemUtils {
     }
 
     /**
-     * 获得屏幕高度
+     * 获得屏幕宽度
      *
      * @param context 上下文
-     * @return 获得屏幕高度
+     * @return 获得屏幕宽度
      */
     public static int getScreenHeight(Context context) {
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);

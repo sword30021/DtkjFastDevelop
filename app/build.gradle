@@ -28,4 +28,5 @@ dependencies {
     androidTestImplementation dep.espressoCore
 
     implementation project(':dtkj_library_utils')
+    implementation project(':dtkj_library_views')
 }

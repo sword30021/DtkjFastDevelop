@@ -30,6 +30,7 @@ dependencies {
     implementation dep.constraintLayout
     implementation dep.design
     testImplementation dep.junit
+    testImplementation dep.mockito
     androidTestImplementation dep.testRunner
     androidTestImplementation dep.espressoCore
 }

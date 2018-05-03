@@ -12,6 +12,7 @@ ext {
             junit            : '4.12',
             testRunner       : '1.0.1',
             espressoCore     : '3.0.1',
+            mockito          : '2.18.3',
 
             dtkjUtilsVersion : '0.0.1',
             dtkjViewsVersion : '0.0.1'
@@ -24,5 +25,6 @@ ext {
             junit           : "junit:junit:$ver.junit",
             testRunner      : "com.android.support.test:runner:$ver.testRunner",
             espressoCore    : "com.android.support.test.espresso:espresso-core:$ver.espressoCore",
+            mockito         : "org.mockito:mockito-core:$ver.mockito",
     ]
 }
