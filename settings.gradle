@@ -1,1 +1,1 @@
-include ':app', ':dtkj_library_utils'
+include ':app', ':dtkj_library_utils', ':dtkj_library_views'

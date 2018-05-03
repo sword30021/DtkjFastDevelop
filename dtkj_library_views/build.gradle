@@ -4,6 +4,9 @@ apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion ver.compileSdkVersion
+
+
+
     defaultConfig {
         minSdkVersion ver.minSdkVersion
         targetSdkVersion ver.targetSdkVersion
@@ -36,18 +39,18 @@ dependencies {
 
 ext {
     bintrayRepo = 'AndroidLibrary'
-    bintrayName = 'dtkj_library_utils'
+    bintrayName = 'dtkj_library_views'
 
-    publishedGroupId = 'com.dtkj.utils'
-    libraryName = 'dtkj_library_utils'
-    artifact = 'dtkj_library_utils'
+    publishedGroupId = 'com.dtkj.views'
+    libraryName = 'dtkj_library_views'
+    artifact = 'dtkj_library_views'
 
-    libraryDescription = 'the library contain most commons utils for android develop'
+    libraryDescription = 'the library contain most custom widget for android develop'
 
     siteUrl = 'https://github.com/sword30021/DtkjFastDevelop'
     gitUrl = 'https://github.com/sword30021/DtkjFastDevelop.git'
 
-    libraryVersion = ver.dtkjUtilsVersion
+    libraryVersion = ver.dtkjViewsVersion
 
     developerId = 'sword'
     developerName = 'sword'
